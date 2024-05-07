@@ -1,0 +1,254 @@
+{
+    "title": "Shell Scripting and Automation",
+    "description": "Learn how to write shell scripts and automate tasks in Linux.",
+    "image": "/lesson6.jpeg",
+    "backgroundColor": "#f2e1cd",
+    "textColor": "#333",
+    "primaryColor": "#e98102",
+    "secondaryColor": "#d77704",
+    "sections": [
+      {
+        "type": "hero",
+        "text": "Unleash the power of shell scripting and automation in Linux!"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shell scripting is a powerful tool that allows you to automate repetitive tasks, create custom utilities, and streamline your workflow in Linux. By writing shell scripts, you can combine multiple commands, use control structures, and perform complex operations with ease."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Getting Started with Shell Scripting"
+      },
+      {
+        "type": "paragraph",
+        "text": "To begin writing shell scripts, you need to choose a shell interpreter. The most common shell in Linux is Bash (Bourne-Again Shell). Other popular shells include Zsh, Ksh, and Fish."
+      },
+      {
+        "type": "paragraph",
+        "text": "To create a shell script, follow these steps:"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "type": "listItem",
+            "text": "Open a text editor and create a new file with a `.sh` extension (e.g., `script.sh`)."
+          },
+          {
+            "type": "listItem",
+            "text": "Add a shebang line at the top of the file to specify the shell interpreter. For Bash, use `#!/bin/bash`."
+          },
+          {
+            "type": "listItem",
+            "text": "Write your shell commands and logic in the script file."
+          },
+          {
+            "type": "listItem",
+            "text": "Save the file and make it executable using the `chmod` command:"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "chmod +x script.sh"
+      },
+      {
+        "type": "paragraph",
+        "text": "Now you can run your shell script by executing:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "./script.sh"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Variables and Input"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shell scripts can use variables to store and manipulate data. To declare a variable, use the following syntax:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "variable_name=\"value\""
+      },
+      {
+        "type": "paragraph",
+        "text": "To access the value of a variable, prefix it with a `$` sign:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "echo $variable_name"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shell scripts can also accept user input using the `read` command:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "read -p \"Enter your name: \" name\necho \"Hello, $name!\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Control Structures"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shell scripts support various control structures for flow control and decision-making."
+      },
+      {
+        "type": "paragraph",
+        "text": "1. Conditional Statements:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "if [ condition ]; then\n  # commands\nelif [ condition ]; then\n  # commands\nelse\n  # commands\nfi"
+      },
+      {
+        "type": "paragraph",
+        "text": "2. Loops:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "# For loop\nfor item in list; do\n  # commands\ndone\n\n# While loop\nwhile [ condition ]; do\n  # commands\ndone"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Functions"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shell scripts support functions for code reusability and modularity. To define a function, use the following syntax:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "function_name() {\n  # commands\n}"
+      },
+      {
+        "type": "paragraph",
+        "text": "To call a function, simply use its name:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "function_name"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Command-Line Arguments"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shell scripts can accept command-line arguments, which are passed to the script when it is executed. The arguments are accessible using special variables:"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "type": "listItem",
+            "text": "`$0`: The name of the script itself."
+          },
+          {
+            "type": "listItem",
+            "text": "`$1`, `$2`, etc.: The individual command-line arguments."
+          },
+          {
+            "type": "listItem",
+            "text": "`$@`: All the command-line arguments as separate words."
+          },
+          {
+            "type": "listItem",
+            "text": "`$#`: The number of command-line arguments."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Example:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "echo \"Script name: $0\"\necho \"First argument: $1\"\necho \"Second argument: $2\"\necho \"All arguments: $@\"\necho \"Number of arguments: $#\""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Automation with Shell Scripts"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shell scripts are powerful tools for automating repetitive tasks and system administration. Here are a few examples:"
+      },
+      {
+        "type": "list",
+        
+        "items": [
+          {
+            "type": "listItem",
+            "text": "Automating backups:"
+          }
+        ]
+    },
+    {
+        "type": "code",
+        "language": "bash",
+        "code": "#!/bin/bash\n\nbackup_dir=\"/path/to/backup\"\nsource_dir=\"/path/to/source\"\n\ntar -czf \"$backup_dir/backup_$(date +%Y%m%d).tar.gz\" \"$source_dir\""
+      },
+      {
+        "type": "list",
+        
+        "items": [
+            {
+                "type": "listItem",
+                "text": "Monitoring disk space:"
+              }
+        ]
+    },
+          {
+            "type": "code",
+            "language": "bash",
+            "code": "#!/bin/bash\n\nthreshold=90\npartition=\"/dev/sda1\"\n\nusage=$(df -h | grep $partition | awk '{ print $5 }' | cut -d'%' -f1)\n\nif [ $usage -ge $threshold ]; then\n  echo \"Disk space usage on $partition is $usage%. Threshold reached!\"\nfi"
+          },
+          {
+            "type": "list",
+            
+            "items": [
+                {
+                    "type": "listItem",
+                    "text": "System maintenance tasks:"
+                  }
+            ]
+        },
+      {
+        "type": "code",
+        "language": "bash",
+        "code": "#!/bin/bash\n\nbackup_dir=\"/path/to/backup\"\nsource_dir=\"/path/to/source\"\n\ntar -czf \"$backup_dir/backup_$(date +%Y%m%d).tar.gz\" \"$source_dir\""
+      },
+      {
+        "type": "paragraph",
+        "text": "These are just a few examples of what you can achieve with shell scripting and automation. By combining various shell commands, control structures, and logical operations, you can create powerful scripts to streamline your workflow and automate complex tasks."
+      },
+      {
+        "type": "paragraph",
+        "text": "As you advance in your shell scripting skills, you can explore more advanced topics like regular expressions, string manipulation, file parsing, and system monitoring. The possibilities are endless!"
+      },
+      {
+        "type": "paragraph",
+        "text": "Remember to test your scripts thoroughly, handle errors gracefully, and document your code for future reference and maintainability. Happy scripting!"
+      }
+    ]
+  }

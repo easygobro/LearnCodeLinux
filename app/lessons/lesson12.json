@@ -1,0 +1,170 @@
+{
+    "title": "Advanced System Programming",
+    "description": "Explore advanced system programming techniques and develop low-level applications in Linux.",
+    "image": "/lesson12.jpeg",
+    "backgroundColor": "#f2e1cd",
+    "textColor": "#333",
+    "primaryColor": "#e98102",
+    "secondaryColor": "#d77704",
+    "sections": [
+      {
+        "type": "hero",
+        "text": "Become an expert in Linux system programming!"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Developing System-Level Applications in C"
+      },
+      {
+        "type": "paragraph",
+        "text": "System-level programming involves writing applications that interact directly with the operating system and hardware. In Linux, system-level applications are typically written in the C programming language."
+      },
+      {
+        "type": "paragraph",
+        "text": "Key concepts in system-level programming include:"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "type": "listItem",
+            "text": "Process creation and management using `fork()`, `exec()`, and `wait()`."
+          },
+          {
+            "type": "listItem",
+            "text": "File I/O operations using system calls like `open()`, `read()`, `write()`, and `close()`."
+          },
+          {
+            "type": "listItem",
+            "text": "Memory management using `malloc()`, `free()`, and `mmap()`."
+          },
+          {
+            "type": "listItem",
+            "text": "Signal handling and interprocess communication (IPC) mechanisms."
+          },
+          {
+            "type": "listItem",
+            "text": "Multithreading using POSIX threads (pthreads) or the `clone()` system call."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of creating a child process using `fork()`:"
+      },
+      {
+        "type": "code",
+        "language": "c",
+        "code": "#include <stdio.h>\n#include <unistd.h>\n\nint main() {\n    pid_t pid = fork();\n    \n    if (pid == 0) {\n        // Child process\n        printf(\"Child process: PID = %d\\n\", getpid());\n    } else if (pid > 0) {\n        // Parent process\n        printf(\"Parent process: PID = %d, Child PID = %d\\n\", getpid(), pid);\n    } else {\n        // Fork failed\n        perror(\"fork\");\n        return 1;\n    }\n    \n    return 0;\n}"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Working with System Calls and Low-Level APIs"
+      },
+      {
+        "type": "paragraph",
+        "text": "System calls are the interface between user-space applications and the Linux kernel. They provide a way to request services from the operating system, such as file I/O, process management, and memory allocation."
+      },
+      {
+        "type": "paragraph",
+        "text": "Low-level APIs, such as the GNU C Library (glibc) and the Linux Standard Base (LSB), provide additional functions and utilities for system programming."
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of using the `open()` system call to open a file:"
+      },
+      {
+        "type": "code",
+        "language": "c",
+        "code": "#include <fcntl.h>\n#include <unistd.h>\n\nint main() {\n    int fd = open(\"file.txt\", O_RDONLY);\n    if (fd == -1) {\n        perror(\"open\");\n        return 1;\n    }\n    \n    // Perform file operations using the file descriptor (fd)\n    \n    close(fd);\n    return 0;\n}"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Inter-Process Communication and Synchronization"
+      },
+      {
+        "type": "paragraph",
+        "text": "Inter-process communication (IPC) allows processes to exchange data and synchronize their actions. Linux provides various IPC mechanisms, including pipes, named pipes (FIFOs), message queues, shared memory, and sockets."
+      },
+      {
+        "type": "paragraph",
+        "text": "Synchronization primitives, such as mutexes, semaphores, and condition variables, are used to coordinate access to shared resources and prevent race conditions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of using a pipe for IPC:"
+      },
+      {
+        "type": "code",
+        "language": "c",
+        "code": "#include <stdio.h>\n#include <unistd.h>\n\nint main() {\n    int pipefd[2];\n    char buffer[256];\n    \n    if (pipe(pipefd) == -1) {\n        perror(\"pipe\");\n        return 1;\n    }\n    \n    pid_t pid = fork();\n    \n    if (pid == 0) {\n        // Child process\n        close(pipefd[1]); // Close the write end\n        read(pipefd[0], buffer, sizeof(buffer));\n        printf(\"Child received: %s\\n\", buffer);\n        close(pipefd[0]);\n    } else if (pid > 0) {\n        // Parent process\n        close(pipefd[0]); // Close the read end\n        write(pipefd[1], \"Hello, child!\", 13);\n        close(pipefd[1]);\n    } else {\n        perror(\"fork\");\n        return 1;\n    }\n    \n    return 0;\n}"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Developing Device Drivers and Kernel Modules"
+      },
+      {
+        "type": "paragraph",
+        "text": "Device drivers and kernel modules are essential components of the Linux system that enable communication between user-space applications and hardware devices. Developing device drivers and kernel modules requires a deep understanding of kernel programming and hardware interfaces."
+      },
+      {
+        "type": "paragraph",
+        "text": "Key concepts in device driver and kernel module development include:"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "type": "listItem",
+            "text": "Registering and unregistering devices using the kernel's device model."
+          },
+          {
+            "type": "listItem",
+            "text": "Implementing device-specific operations, such as open, close, read, and write."
+          },
+          {
+            "type": "listItem",
+            "text": "Handling interrupts and managing device resources."
+          },
+          {
+            "type": "listItem",
+            "text": "Utilizing kernel APIs and data structures for memory allocation, synchronization, and data transfer."
+          },
+          {
+            "type": "listItem",
+            "text": "Testing and debugging device drivers and kernel modules using tools like `printk()`, `kgdb`, and `ftrace`."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of a simple character device driver:"
+      },
+      {
+        "type": "code",
+        "language": "c",
+        "code": "#include <linux/module.h>\n#include <linux/fs.h>\n#include <linux/cdev.h>\n\nstatic int mydev_open(struct inode *inode, struct file *file) {\n    // Device open logic\n    return 0;\n}\n\nstatic int mydev_release(struct inode *inode, struct file *file) {\n    // Device release logic\n    return 0;\n}\n\nstatic ssize_t mydev_read(struct file *file, char __user *buf, size_t count, loff_t *offset) {\n    // Device read logic\n    return count;\n}\n\nstatic ssize_t mydev_write(struct file *file, const char __user *buf, size_t count, loff_t *offset) {\n    // Device write logic\n    return count;\n}\n\nstatic struct file_operations mydev_fops = {\n    .owner = THIS_MODULE,\n    .open = mydev_open,\n    .release = mydev_release,\n    .read = mydev_read,\n    .write = mydev_write,\n};\n\nstatic struct cdev mydev_cdev;\n\nstatic int __init mydev_init(void) {\n    // Device initialization logic\n    cdev_init(&mydev_cdev, &mydev_fops);\n    cdev_add(&mydev_cdev, dev, 1);\n    return 0;\n}\n\nstatic void __exit mydev_exit(void) {\n    // Device cleanup logic\n    cdev_del(&mydev_cdev);\n}\n\nmodule_init(mydev_init);\nmodule_exit(mydev_exit);\n\nMODULE_LICENSE(\"GPL\");\nMODULE_AUTHOR(\"Your Name\");\nMODULE_DESCRIPTION(\"A simple character device driver\");"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Advanced system programming in Linux involves working with low-level system calls, APIs, and kernel programming concepts. By mastering these techniques, you can develop efficient and powerful system-level applications, device drivers, and kernel modules."
+      },
+      {
+        "type": "paragraph",
+        "text": "Remember to follow best practices, handle errors gracefully, and thoroughly test and debug your code. Continuously explore the Linux kernel documentation and community resources to stay updated with the latest techniques and APIs."
+      },
+      {
+        "type": "paragraph",
+        "text": "With a deep understanding of advanced system programming, you can push the boundaries of what's possible with Linux systems and contribute to the development of robust and high-performance applications."
+      }
+    ]
+  }

@@ -1,0 +1,152 @@
+{
+  "title": "Installing Linux",
+  "description": "Learn how to install Linux on your computer or a virtual machine.",
+  "image": "/lesson1.jpeg",
+  "backgroundColor": "#f2e1cd",
+  "textColor": "#333",
+  "primaryColor": "#e98102",
+  "secondaryColor": "#d77704",
+  "sections": [
+    {
+      "type": "hero",
+      "text": "Get started with installing Linux on your system or a virtual machine!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Installing Linux is a straightforward process. You have several options depending on your needs and preferences. You can install Linux directly on your computer or use a virtual machine."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Option 1: Installing Linux on a Virtual Machine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Using a virtual machine allows you to run Linux within your current operating system. Here's how to set it up:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 1: Download and Install VirtualBox"
+    },
+    {
+      "type": "paragraph",
+      "text": "Download VirtualBox from the official website: https://www.virtualbox.org/wiki/Downloads. Choose the appropriate version for your operating system and follow the installation instructions."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 2: Download Ubuntu ISO Image"
+    },
+    {
+      "type": "paragraph",
+      "text": "Visit the Ubuntu download page: https://ubuntu.com/download/desktop. Download the latest version of Ubuntu desktop."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 3: Create a New Virtual Machine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Open VirtualBox and click on \"New\" to create a new virtual machine. Give it a name, select \"Linux\" as the type, and choose \"Ubuntu\" as the version. Allocate memory (at least 2GB) and create a virtual hard disk."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 4: Install Ubuntu on the Virtual Machine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Select the newly created virtual machine and click on \"Start.\" Choose the downloaded Ubuntu ISO image as the startup disk. Follow the installation wizard, choose your language, keyboard layout, and create a user account."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 5: Launch Ubuntu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Once the installation is complete, restart the virtual machine, and Ubuntu will launch. You can now use Linux within the virtual machine environment."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Option 2: Installing Linux Directly on Your Computer"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Choose a Linux Distribution"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are many Linux distributions (distros) available. Some popular ones include:"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "type": "listItem",
+          "text": "Ubuntu: User-friendly and beginner-friendly distro."
+        },
+        {
+          "type": "listItem",
+          "text": "Fedora: Stable and reliable distro, suitable for developers."
+        },
+        {
+          "type": "listItem",
+          "text": "Debian: Known for its stability and large software repository."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "We suggest starting with Ubuntu for this guide."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Download the ISO Image"
+    },
+    {
+      "type": "paragraph",
+      "text": "Once you have chosen a Linux distro, visit its official website and download the ISO image file."
+    },
+    {
+      "type": "paragraph",
+      "text": "To download Ubuntu, go to the link: https://ubuntu.com/download/desktop"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Create a Bootable USB or DVD"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use a tool like Rufus (Windows) or Etcher (macOS/Linux) to create a bootable USB drive or burn the ISO image to a DVD. A USB with at least 4GB is recommended."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Boot from the USB or DVD"
+    },
+    {
+      "type": "paragraph",
+      "text": "Restart your computer and boot from the USB drive or DVD. You may need to change the boot order in your computer's BIOS settings."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Follow the Installation Wizard"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Linux installation wizard will guide you through the process. Choose your language, partitioning options, and create a user account."
+    },
+    {
+      "type": "paragraph",
+      "text": "Once the installation is complete, restart your computer, and you'll be ready to explore Linux!"
+    }
+  ]
+ }

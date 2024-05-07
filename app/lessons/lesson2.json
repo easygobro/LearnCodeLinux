@@ -1,0 +1,142 @@
+{
+  "title": "Command Line Basics",
+  "description": "Master the basics of the Linux command line.",
+  "image": "/lesson2.jpeg",
+  "backgroundColor": "#f2e1cd",
+  "textColor": "#333",
+  "primaryColor": "#e98102",
+  "secondaryColor": "#d77704",
+  "sections": [
+    {
+      "type": "hero",
+      "text": "Dive into the world of the Linux command line!"
+    },
+    {
+      "type": "paragraph",
+      "text": "The command line, also known as the terminal or shell, is a powerful tool for interacting with your Linux system."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Opening the Terminal"
+    },
+    {
+      "type": "paragraph",
+      "text": "To open the terminal, you can typically find it in the applications menu or by pressing `Ctrl+Alt+T`."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Basic Commands"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here are some basic commands to get you started:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "ls # List files and directories\ncd # Change directory\npwd # Print working directory\nmkdir # Create a new directory\ncp # Copy files and directories\nmv # Move or rename files and directories\nrm # Remove files and directories\ncat # Display file contents\nnano # Open the nano text editor"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Command Options and Arguments"
+    },
+    {
+      "type": "paragraph",
+      "text": "Most commands accept options and arguments to modify their behavior. For example:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "ls -l # List files in a long format\ncp -r mydir newdir # Copy directory recursively"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Navigating the File System"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the `cd` command to change directories and navigate through the file system. For example:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "cd /home/user/documents # Change to the 'documents' directory\ncd .. # Go up one directory level"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Creating and Removing Files and Directories"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the `touch`, `mkdir`, and `rm` commands to create and remove files and directories:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "touch file.txt # Create a new empty file\nmkdir mydir # Create a new directory\nrm file.txt # Remove a file\nrm -r mydir # Remove a directory recursively"
+    },
+    {
+      "type": "activity",
+      "text": "Practice Exercise: Create a new directory called 'practice' in your home directory, navigate into it, create a new file called 'hello.txt', and then remove the file and directory."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Viewing File Contents"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the `cat`, `head`, and `tail` commands to view the contents of files:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "cat file.txt # Display the entire file\nhead file.txt # Display the first 10 lines of the file\ntail file.txt # Display the last 10 lines of the file"
+    },
+    {
+      "type": "activity",
+      "text": "Practice Exercise: Create a new file called 'sample.txt' with some sample text, and use the `cat`, `head`, and `tail` commands to view its contents."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "File Permissions"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the `chmod` command to change file permissions:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "chmod 644 file.txt # Set read/write permissions for the owner and read permissions for others\nchmod +x script.sh # Add execute permission to a script"
+    },
+    {
+      "type": "activity",
+      "text": "Practice Exercise: Create a new file and use the `chmod` command to change its permissions. Observe how the permissions affect your ability to read, write, and execute the file."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Getting Help"
+    },
+    {
+      "type": "paragraph",
+      "text": "To get help on a command, you can use the `man` command followed by the command name. For example:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "man ls # Display the manual page for the ls command"
+    },
+    {
+      "type": "paragraph",
+      "text": "Practice using these commands and exploring their options. The more you work with the command line, the more comfortable and efficient you'll become!"
+    }
+  ]
+}

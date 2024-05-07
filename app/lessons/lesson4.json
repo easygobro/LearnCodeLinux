@@ -1,0 +1,171 @@
+{
+  "title": "Text Editors",
+  "description": "Learn about popular text editors and IDEs in Linux.",
+  "image": "/lesson4.jpeg",
+  "backgroundColor": "#f2e1cd",
+  "textColor": "#333",
+  "primaryColor": "#e98102",
+  "secondaryColor": "#d77704",
+  "sections": [
+    {
+      "type": "hero",
+      "text": "Discover the power of Linux text editors and IDEs!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Linux offers a wide range of text editors and integrated development environments (IDEs) to cater to different needs and preferences. Whether you're a beginner or an advanced user, there's a tool that suits your requirements."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Command-line Text Editors"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Nano"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nano is a simple and beginner-friendly command-line text editor. To open a file with Nano, use the command:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "nano filename.txt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the arrow keys to navigate through the file. Nano displays helpful shortcuts at the bottom of the screen, such as `^O` for saving and `^X` for exiting. The `^` symbol represents the `Ctrl` key."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vim"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vim is a powerful and highly configurable command-line text editor. It has a steeper learning curve compared to Nano but offers advanced features for efficient editing. To open a file with Vim, use the command:"
+    },
+    {
+      "type": "code",
+      "language": "bash",
+      "code": "vim filename.txt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vim has two main modes: command mode and insert mode. When you open Vim, it starts in command mode. To enter insert mode and start editing, press `i`. To return to command mode, press `Esc`."
+    },
+    {
+      "type": "paragraph",
+      "text": "In command mode, you can use various commands to navigate, search, and perform actions on the text. Some basic commands include:"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "type": "listItem",
+          "text": "`h`, `j`, `k`, `l`: Move the cursor left, down, up, and right, respectively."
+        },
+        {
+          "type": "listItem",
+          "text": "`:w`: Save the file."
+        },
+        {
+          "type": "listItem",
+          "text": "`:q`: Quit Vim."
+        },
+        {
+          "type": "listItem",
+          "text": "`:q!`: Quit Vim without saving changes."
+        },
+        {
+          "type": "listItem",
+          "text": "`:wq`: Save the file and quit Vim."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Graphical Text Editors"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Visual Studio Code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Visual Studio Code (VS Code) is a popular and feature-rich text editor developed by Microsoft. It offers a user-friendly interface, extensive plugin ecosystem, and built-in support for version control systems like Git."
+    },
+    {
+      "type": "paragraph",
+      "text": "Advantages of using VS Code include:"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "type": "listItem",
+          "text": "Intuitive and customizable user interface."
+        },
+        {
+          "type": "listItem",
+          "text": "Support for multiple programming languages and file formats."
+        },
+        {
+          "type": "listItem",
+          "text": "Integrated terminal for running commands within the editor."
+        },
+        {
+          "type": "listItem",
+          "text": "Rich ecosystem of extensions for added functionality."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Integrated Development Environments (IDEs)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "IntelliJ IDEA"
+    },
+    {
+      "type": "paragraph",
+      "text": "IntelliJ IDEA is a powerful IDE developed by JetBrains, primarily used for Java development. It offers advanced features like intelligent code completion, refactoring tools, and integrated debugging."
+    },
+    {
+      "type": "paragraph",
+      "text": "IntelliJ IDEA is well-suited for:"
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "type": "listItem",
+          "text": "Java developers working on large-scale projects."
+        },
+        {
+          "type": "listItem",
+          "text": "Developers who require advanced code analysis and refactoring capabilities."
+        },
+        {
+          "type": "listItem",
+          "text": "Teams collaborating on complex Java applications."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "When choosing a text editor or IDE, consider factors such as your programming language preferences, project requirements, and personal workflow. Experiment with different tools to find the one that best fits your needs and enhances your productivity."
+    },
+    {
+      "type": "paragraph",
+      "text": "Remember, the choice of text editor or IDE is subjective, and what works well for one person may not be the best fit for another. It's important to invest time in learning and mastering the tool you choose to maximize its potential and streamline your development process."
+    }
+  ]
+}
